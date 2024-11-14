@@ -1058,8 +1058,15 @@ const data = {
   limit: 30,
 };
 
+document.body.style.backgroundColor = "beige";
+document.write(
+  `<table style="border: 1px solid black; border-collapse: collapse; padding: 8px 15px; margin: auto"><tr><th>Name</th><th>Cuisine</th></tr>`
+);
 let arr = data.recipes.flatMap((x) => {
   if (x.rating > 4.5) {
+    document.write(
+      `<tr><td style="border: 1px solid black;">${x.name}</td><td style="border: 1px solid black;">${x.cuisine}</td></tr>`
+    );
     return [x.name, x.cuisine];
   } else return [];
 });
