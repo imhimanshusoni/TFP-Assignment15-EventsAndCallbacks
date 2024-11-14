@@ -1063,3 +1063,5 @@ let arr = data.recipes.flatMap((x) => {
     return [x.name, x.cuisine];
   } else return [];
 });
+
+console.log(arr);
