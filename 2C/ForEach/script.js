@@ -1058,6 +1058,7 @@ const data = {
   limit: 30,
 };
 
+document.body.style.backgroundColor = "lightgray";
 document.write(
   `<table style="border: 1px solid black; border-collapse: collapse; margin: 0 auto;"><tr><th style="padding: 0 8px;">Name</th><th style="padding: 0 8px;">Cuisine</th></tr>`
 );
