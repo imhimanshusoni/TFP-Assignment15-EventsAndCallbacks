@@ -1062,12 +1062,16 @@ document.write(
   `<table style="border: 1px solid black; border-collapse: collapse; margin: 0 auto;"><tr><th style="padding: 0 8px;">Name</th><th style="padding: 0 8px;">Cuisine</th></tr>`
 );
 data.recipes.forEach((element) => {
+  let isPresent = false;
   element.tags.forEach((x) => {
     if (x == "Indian" || x == "Italian") {
-      console.log(`${element.name} : ${element.cuisine}`);
-      document.write(
-        `<tr><td style="border: 1px solid black; padding: 0 8px">${element.name}</td><td style="border: 1px solid black; padding: 0 8px">${element.cuisine}</td></tr>`
-      );
+      isPresent = true;
     }
   });
+  if (isPresent) {
+    console.log(`${element.name} : ${element.cuisine}`);
+    document.write(
+      `<tr><td style="border: 1px solid black; padding: 0 8px">${element.name}</td><td style="border: 1px solid black; padding: 0 8px">${element.cuisine}</td></tr>`
+    );
+  }
 });
