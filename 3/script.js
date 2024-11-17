@@ -1116,6 +1116,6 @@ for (let i = 0; i < cards.length; ++i) {
   deleteButton[i].style.alignItems = "center";
   deleteButton[i].addEventListener("click", (e) => {
     const elem = e.target.closest("div");
-    elem.style.display = "none";
+    elem.remove();
   });
 }
