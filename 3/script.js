@@ -1074,7 +1074,7 @@ data.recipes.forEach((x) => {
   );
   document.write(`<strong>Cook Time:</strong> ${x.cookTimeMinutes} min<br>`);
   document.write(`<strong>Servings:</strong> ${x.servings} min<br>`);
-  document.write(`<strong>Difficulty:</strong> ${x.difficulty} min<br>`);
+  document.write(`<strong>Difficulty:</strong> ${x.difficulty}<br>`);
   document.write(`<strong>Servings:</strong> ${x.servings}<br>`);
   document.write(`<strong>Cuisine:</strong> ${x.cuisine}<br>`);
   document.write(`<strong>Ingredients:</strong> ${x.ingredients}.<br>`);
