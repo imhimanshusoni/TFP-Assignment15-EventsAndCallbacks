@@ -1086,14 +1086,15 @@ document.write(`</div>`);
 const cards = document.getElementsByClassName("card");
 const cardHead = document.getElementsByClassName("card-heading");
 const deleteButton = document.getElementsByClassName("delete");
+const container = document.getElementById("container");
 document.body.style.background = "no-repeat url('./images/website-bg.jpg')";
 document.body.style.backgroundSize = "cover";
 document.body.style.backgroundAttachment = "fixed";
-document.getElementById("container").style.display = "flex";
-document.getElementById("container").style.flexWrap = "wrap";
-document.getElementById("container").style.flexDirection = "row";
-document.getElementById("container").style.alignItems = "center";
-document.getElementById("container").style.justifyContent = "center";
+container.style.display = "flex";
+container.style.flexWrap = "wrap";
+container.style.flexDirection = "row";
+container.style.alignItems = "center";
+container.style.justifyContent = "center";
 
 for (let i = 0; i < cards.length; ++i) {
   cards[i].style.borderRadius = "12px";
