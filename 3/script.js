@@ -1073,7 +1073,6 @@ data.recipes.forEach((x) => {
     `<strong>Preparation Time:</strong> ${x.prepTimeMinutes} min<br>`
   );
   document.write(`<strong>Cook Time:</strong> ${x.cookTimeMinutes} min<br>`);
-  document.write(`<strong>Servings:</strong> ${x.servings} min<br>`);
   document.write(`<strong>Difficulty:</strong> ${x.difficulty}<br>`);
   document.write(`<strong>Servings:</strong> ${x.servings}<br>`);
   document.write(`<strong>Cuisine:</strong> ${x.cuisine}<br>`);
@@ -1097,6 +1096,7 @@ document.getElementById("container").style.alignItems = "center";
 document.getElementById("container").style.justifyContent = "center";
 
 for (let i = 0; i < cards.length; ++i) {
+  cards[i].style.borderRadius = "12px";
   cards[i].style.width = "400px";
   cards[i].style.height = "100%";
   cards[i].style.margin = "20px 20px";
