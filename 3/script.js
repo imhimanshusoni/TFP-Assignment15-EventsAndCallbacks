@@ -1114,6 +1114,14 @@ for (let i = 0; i < cards.length; ++i) {
   deleteButton[i].style.backgroundColor = "green";
   deleteButton[i].style.padding = "12px 30px";
   deleteButton[i].style.alignItems = "center";
+  deleteButton[i].addEventListener("mouseover", (e) => {
+    e.target.style.backgroundColor = "white";
+    e.target.style.color = "green";
+  });
+  deleteButton[i].addEventListener("mouseout", (e) => {
+    e.target.style.color = "white";
+    e.target.style.backgroundColor = "green";
+  });
   deleteButton[i].addEventListener("click", (e) => {
     const elem = e.target.closest("div");
     elem.remove();
