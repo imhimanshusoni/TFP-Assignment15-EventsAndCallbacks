@@ -1058,13 +1058,6 @@ const data = {
   limit: 30,
 };
 
-const allElements = document.querySelectorAll("*");
-allElements.forEach((x) => {
-  x.style.margin = 0;
-  x.style.padding = 0;
-  x.style.boxSizing = "border-box";
-});
-
 document.write(`<div id="container">`);
 data.recipes.forEach((x) => {
   document.write(`<div class="card"> <h1 class="card-heading">${x.name}</h1>`);
@@ -1076,45 +1069,20 @@ data.recipes.forEach((x) => {
   document.write(`<strong>Difficulty:</strong> ${x.difficulty}<br>`);
   document.write(`<strong>Servings:</strong> ${x.servings}<br>`);
   document.write(`<strong>Cuisine:</strong> ${x.cuisine}<br>`);
-  document.write(`<strong>Ingredients:</strong> ${x.ingredients}.<br>`);
-  document.write(`<strong>Instructions:</strong> ${x.instructions}<br><br>`);
+  document.write(
+    `<div class="ing"><strong>Ingredients:</strong> ${x.ingredients}.</div>`
+  );
+  document.write(
+    `<div class="ins"><strong>Instructions:</strong> ${x.instructions}</div><br>`
+  );
   document.write(`<button class="delete">Delete</button>`);
   document.write(`</div>`);
 });
 document.write(`</div>`);
 
-const cards = document.getElementsByClassName("card");
-const cardHead = document.getElementsByClassName("card-heading");
 const deleteButton = document.getElementsByClassName("delete");
-const container = document.getElementById("container");
-document.body.style.background = "no-repeat url('./images/website-bg.jpg')";
-document.body.style.backgroundSize = "cover";
-document.body.style.backgroundAttachment = "fixed";
-container.style.display = "flex";
-container.style.flexWrap = "wrap";
-container.style.flexDirection = "row";
-container.style.alignItems = "center";
-container.style.justifyContent = "center";
 
-for (let i = 0; i < cards.length; ++i) {
-  cards[i].style.borderRadius = "12px";
-  cards[i].style.width = "400px";
-  cards[i].style.height = "100%";
-  cards[i].style.margin = "20px 20px";
-  cards[i].style.backgroundColor = "white";
-  cards[i].style.color = "black";
-  cards[i].style.padding = "20px";
-  cardHead[i].style.textAlign = "center";
-  cardHead[i].style.color = "green";
-  deleteButton[i].style.backgroundColor = "#fff";
-  deleteButton[i].style.cursor = "pointer";
-  deleteButton[i].style.display = "flex";
-  deleteButton[i].style.border = "1px solid green";
-  deleteButton[i].style.borderRadius = "10px";
-  deleteButton[i].style.color = "white";
-  deleteButton[i].style.backgroundColor = "green";
-  deleteButton[i].style.padding = "12px 30px";
-  deleteButton[i].style.alignItems = "center";
+for (let i = 0; i < data.recipes.length; ++i) {
   deleteButton[i].addEventListener("mouseover", (e) => {
     e.target.style.backgroundColor = "white";
     e.target.style.color = "green";

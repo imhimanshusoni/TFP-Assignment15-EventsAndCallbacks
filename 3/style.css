@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: no-repeat url("./images/website-bg.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+}
+.card {
+  width: 400px;
+  margin: 20px;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 12px;
+}
+.card-heading {
+  text-align: center;
+  color: green;
+}
+.delete {
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  border: 1px solid green;
+  border-radius: 10px;
+  color: white;
+  background-color: green;
+  padding: 12px 30px;
+  align-items: center;
+}
+.ins {
+  -webkit-line-clamp: 5;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.ing {
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
